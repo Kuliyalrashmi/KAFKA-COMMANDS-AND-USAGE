@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "User",
+    "fields": [
+        {"name" : "id" , "type" : "int"},
+        {"name" : "first_name" , "type" : "string"},
+        {"name": "last_name" , "type"  : "string"},
+        {"name": "age" , "type" : "int" },
+        {"name": "year" , "type" : "int"},
+        {"name": "language_used"  , "type" : "string"},
+        {"name": "semester" , "type" : "int"},
+        {"name" : "email" , "type" : [null , "string"] , "default" : null}
+    ]
+}
