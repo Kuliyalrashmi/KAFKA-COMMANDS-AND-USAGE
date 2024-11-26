@@ -1,0 +1,30 @@
+{
+    "name": "personal_info_schema",
+    "type": "record",
+    "fields": [
+        {"name": "first_name"  , "type" : "string" , "doc": "user first name"},
+        {"name" : "family_name" , "type" : "string" , "doc": "user last name"},
+        {"name": "adhar_number" , "type" : "int" , "doc" : "user adhar number"},
+        {"name": "pan_number" , "type" : "string", "doc": "user pan deatils"},
+        {"name": "current_job" , "type" : "string" , "doc": "user current job"},
+        {"name": "contact_number" , "type" : "string" , "doc" : "user contact number"},
+        {"name": "address" , "type" : "string" , "doc" :  "user address"},
+        {
+            "name": "Accounts",
+            "type" : [
+                "null" , 
+                {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "record",
+                        "name" : "user_sub_accounts",
+                        "fields": [
+                            {"name" : "AccountId" , "type": "int"},
+                            {"name" : "AccountType" , "type" : "string"}
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
